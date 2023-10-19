@@ -13,6 +13,9 @@
             team.AddFeldspieler(spieler1);
             team.AddFeldspieler(spieler2);
             team.SetTorwart(torwart);
+
+            int ergebnis = team.Spielzug();
+            Console.WriteLine("Ergebnis des Spielzugs: " +ergebnis);
         }
     }
 }
