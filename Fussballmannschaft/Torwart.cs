@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fussballmannschaft
 {
-    internal class Torwart
+    public class Torwart
     {
     }
 }
