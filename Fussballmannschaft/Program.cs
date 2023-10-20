@@ -7,7 +7,11 @@ class Program
         Mannschaft team1 = new Mannschaft();
         Mannschaft team2 = new Mannschaft();
 
-        Spiel spiel1 = new Spiel();
+        Spiel spiel = new Spiel();
+
+        Resultat ergebnisSpiel = spiel.SpielResultat;
+
+        /*Spiel spiel1 = new Spiel();
         Spiel spiel2 = new Spiel();
 
         Resultat ergebnisSpiel1 = spiel1.SpielResultat;
@@ -16,7 +20,7 @@ class Program
         team1.AddSpiel(spiel1);
         team2.AddSpiel(spiel1);
         team2.AddSpiel(spiel2);
-
+        */
 
 
         //team 1
@@ -42,9 +46,21 @@ class Program
         int ergebnisTeam1 = team1.Spielzug();
         int ergebnisTeam2 = team2.Spielzug();
 
+        Console.WriteLine("Spielergebnis:");
+        Console.WriteLine("Team 1: " + ergebnisTeam1);
+        Console.WriteLine("Team 2: " + ergebnisTeam2);
 
-        Console.WriteLine("Ergebnis des Spielzugs für Team 1: " + ergebnisTeam1);
+        //safe result in 'Resultat'
+        ergebnisSpiel.Team1Ergebnis = ergebnisTeam1;
+        ergebnisSpiel.Team2Ergebnis = ergebnisTeam2;
+
+        Console.WriteLine("Gesamtergebnis:");
+        Console.WriteLine("Team 1: " + ergebnisSpiel.Team1Ergebnis);
+        Console.WriteLine("Team 2: " + ergebnisSpiel.Team2Ergebnis); ;
+
+        /*Console.WriteLine("Ergebnis des Spielzugs für Team 1: " + ergebnisTeam1);
         Console.WriteLine("Ergebnis des Spielzugs für Team 2: " + ergebnisTeam2);
+        */
 
         spieler1Team1.MacheBlutgraetsche(); //calls method 
         torwartTeam1.Abstoss();

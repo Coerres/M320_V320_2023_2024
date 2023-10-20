@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fussballmannschaft
 {
-    internal class Resultat
+    public class Resultat
     {
+        public int Team1Ergebnis { get; set; }
+        public int Team2Ergebnis { get; set; }
+
+        public Resultat()
+        {
+            Team1Ergebnis = 0;
+            Team2Ergebnis = 0;
+        }
     }
 }
