@@ -21,5 +21,6 @@ class Program
         spieler1.DribbletGegnerSchwindlig();
 
         bool schussGehalten = torwart.HalteTor(); //''
+        torwart.Abstoss();
     }
 }
