@@ -15,6 +15,11 @@ namespace Fussballmannschaft
             Name = name;
         }
 
+        public void MacheBlutgraetsche()
+        {
+            Console.WriteLine($"{Name} macht eine Blutgraetsche!");
+        }
+
 
 
         public bool SchiesseTor()

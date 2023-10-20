@@ -16,6 +16,16 @@ namespace Fussballmannschaft
             Feldspieler = new List<Feldspieler>();
             Torwart = null;
         }
+
+        public void AddFeldspieler(Feldspieler feldspieler)
+        {
+            Feldspieler.Add(feldspieler);
+        }
+
+        public void SetTorwart(Torwart torwart)
+        {
+            Torwart = torwart;
+        }
         public int Spielzug()
         {
             int tore = 0;
@@ -48,7 +58,7 @@ namespace Fussballmannschaft
                     Console.WriteLine("Feldspieler hat das Tor verfehlt!");
                 }
             }
-         
+
             return tore;
 
             /*

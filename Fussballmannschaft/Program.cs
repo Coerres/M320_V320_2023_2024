@@ -1,21 +1,22 @@
-﻿namespace Fussballmannschaft
+﻿using Fussballmannschaft;
+
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main()
-        {
-            Mannschaft team = new Mannschaft();
+        Mannschaft team = new Mannschaft();
 
-            Feldspieler spieler1 = new Feldspieler();
-            Feldspieler spieler2 = new Feldspieler();
-            Torwart torwart = new Torwart();
+        Feldspieler spieler1 = new Feldspieler("Spieler1");
+        Feldspieler spieler2 = new Feldspieler("Spieler2");
+        Torwart torwart = new Torwart();
 
-            team.AddFeldspieler(spieler1);
-            team.AddFeldspieler(spieler2);
-            team.SetTorwart(torwart);
+        team.AddFeldspieler(spieler1);
+        team.AddFeldspieler(spieler2);
+        team.SetTorwart(torwart);
 
-            int ergebnis = team.Spielzug();
-            Console.WriteLine("Ergebnis des Spielzugs: " +ergebnis);
-        }
+        int ergebnis = team.Spielzug();
+        Console.WriteLine("Ergebnis des Spielzugs: " + ergebnis);
+
+        spieler1.MacheBlutgraetsche(); // Aufrufen der Methode MacheBlutgraetsche
     }
 }
