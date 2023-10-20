@@ -16,5 +16,15 @@ namespace Fussballmannschaft
             Team1Ergebnis = 0;
             Team2Ergebnis = 0;
         }
+
+        public string GetErgebnisZusammenfassung()
+        {
+            if (Team1Ergebnis > Team2Ergebnis)
+                return "Team 1 gewinnt!";
+            else if (Team1Ergebnis < Team2Ergebnis)
+                return "Team 2 gewinnt!";
+            else
+                return "Unentschieden!";
+        }
     }
 }

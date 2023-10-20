@@ -14,6 +14,7 @@ namespace Fussballmannschaft
         public Spiel()
         {
             Mannschaften = new List<Mannschaft>();
+            SpielResultat = new Resultat();
         }
     }
 }

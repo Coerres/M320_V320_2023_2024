@@ -1,4 +1,5 @@
 ﻿using Fussballmannschaft;
+using System;
 
 class Program
 {
@@ -11,62 +12,46 @@ class Program
 
         Resultat ergebnisSpiel = spiel.SpielResultat;
 
-        /*Spiel spiel1 = new Spiel();
-        Spiel spiel2 = new Spiel();
-
-        Resultat ergebnisSpiel1 = spiel1.SpielResultat;
-        Resultat ergebnisSpiel2 = spiel2.SpielResultat;
-
-        team1.AddSpiel(spiel1);
-        team2.AddSpiel(spiel1);
-        team2.AddSpiel(spiel2);
-        */
-
-
         //team 1
-        Feldspieler spieler1Team1 = new Feldspieler("Spieler 1 Team 1");
-        Feldspieler spieler2Team1 = new Feldspieler("Spieler 2 Team 1");
-        Torwart torwartTeam1 = new Torwart("Torwart Team 1");
+        for (int i = 1; i <= 10; i++)
+        {
+            Feldspieler spieler = new Feldspieler($"Spieler {i} Team 1");
+            team1.AddFeldspieler(spieler);
+        }
 
-        team1.AddFeldspieler(spieler1Team1);
-        team1.AddFeldspieler(spieler2Team1);
+        Torwart torwartTeam1 = new Torwart("Torwart Team 1");
         team1.SetTorwart(torwartTeam1);
 
-
         //team 2
-        Feldspieler spieler1Team2 = new Feldspieler("Spieler 1 Team 2");
-        Feldspieler spieler2Team2 = new Feldspieler("Spieler 2 Team 2");
-        Torwart torwartTeam2 =  new Torwart("Torwart Team 2");
+        for (int i = 1; i <= 10; i++)
+        {
+            Feldspieler spieler = new Feldspieler($"Spieler {i} Team 2");
+            team2.AddFeldspieler(spieler);
+        }
 
-        team2.AddFeldspieler(spieler1Team2);
-        team2.AddFeldspieler(spieler2Team2);
+        Torwart torwartTeam2 = new Torwart("Torwart Team 2");
         team2.SetTorwart(torwartTeam2);
-
 
         int ergebnisTeam1 = team1.Spielzug();
         int ergebnisTeam2 = team2.Spielzug();
 
         Console.WriteLine("Spielergebnis:");
-        Console.WriteLine("Team 1: " + ergebnisTeam1);
-        Console.WriteLine("Team 2: " + ergebnisTeam2);
+        Console.WriteLine("Team 1: " + (ergebnisTeam1 > 0 ? "Tor erzielt" : "Kein Tor"));
+        Console.WriteLine("Team 2: " + (ergebnisTeam2 > 0 ? "Tor erzielt" : "Kein Tor"));
 
-        //safe result in 'Resultat'
+        //save result in 'Resultat'
         ergebnisSpiel.Team1Ergebnis = ergebnisTeam1;
         ergebnisSpiel.Team2Ergebnis = ergebnisTeam2;
 
-        Console.WriteLine("Gesamtergebnis:");
-        Console.WriteLine("Team 1: " + ergebnisSpiel.Team1Ergebnis);
-        Console.WriteLine("Team 2: " + ergebnisSpiel.Team2Ergebnis); ;
-
-        /*Console.WriteLine("Ergebnis des Spielzugs für Team 1: " + ergebnisTeam1);
-        Console.WriteLine("Ergebnis des Spielzugs für Team 2: " + ergebnisTeam2);
-        */
-
-        spieler1Team1.MacheBlutgraetsche(); //calls method 
+        //actions
+        Console.WriteLine("Aktionen:");
+        team1.Feldspieler[0].MacheBlutgraetsche();
         torwartTeam1.Abstoss();
 
-        spieler1Team2.DribbletGegnerSchwindlig();
-        bool schussGehalten = torwartTeam2.HalteTor(); 
-   
+        team2.Feldspieler[0].DribbletGegnerSchwindlig();
+        bool schussGehalten = torwartTeam2.HalteTor();
+
+        Console.WriteLine("Gesamtergebnis:");
+        Console.WriteLine(ergebnisSpiel.GetErgebnisZusammenfassung());
     }
 }
