@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,10 @@ namespace Fussballmannschaft
         public void AddFeldspieler(Feldspieler feldspieler)
         {
             Feldspieler.Add(feldspieler);
+        }
+        public void AddSpiel(Spiel spiel)
+        {
+            spiel.Mannschaften.Add(this);
         }
 
         public void SetTorwart(Torwart torwart)
@@ -60,6 +65,8 @@ namespace Fussballmannschaft
             }
 
             return tore;
+
+
 
             /*
              // Methode to add 'Feldspieler' to 'Mannschaft'

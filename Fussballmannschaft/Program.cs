@@ -7,6 +7,15 @@ class Program
         Mannschaft team1 = new Mannschaft();
         Mannschaft team2 = new Mannschaft();
 
+        Spiel spiel1 = new Spiel();
+        Spiel spiel2 = new Spiel();
+
+        team1.AddSpiel(spiel1);
+        team2.AddSpiel(spiel1);
+        team2.AddSpiel(spiel2);
+
+
+
         //team 1
         Feldspieler spieler1Team1 = new Feldspieler("Spieler 1 Team 1");
         Feldspieler spieler2Team1 = new Feldspieler("Spieler 2 Team 1");
