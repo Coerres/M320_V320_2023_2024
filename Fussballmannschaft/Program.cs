@@ -10,6 +10,9 @@ class Program
         Spiel spiel1 = new Spiel();
         Spiel spiel2 = new Spiel();
 
+        Resultat ergebnisSpiel1 = spiel1.SpielResultat;
+        Resultat ergebnisSpiel2 = spiel2.SpielResultat;
+
         team1.AddSpiel(spiel1);
         team2.AddSpiel(spiel1);
         team2.AddSpiel(spiel2);

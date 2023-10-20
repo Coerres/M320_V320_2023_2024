@@ -8,6 +8,8 @@ namespace Fussballmannschaft
 {
     public class Spiel
     {
+        public Resultat SpielResultat { get; set; }
+
         public List<Mannschaft> Mannschaften { get; set; }
         public Spiel()
         {
