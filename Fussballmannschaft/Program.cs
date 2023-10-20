@@ -17,6 +17,7 @@ class Program
         int ergebnis = team.Spielzug();
         Console.WriteLine("Ergebnis des Spielzugs: " + ergebnis);
 
-        spieler1.MacheBlutgraetsche(); // Aufrufen der Methode MacheBlutgraetsche
+        spieler1.MacheBlutgraetsche(); //calls method 
+        spieler1.DribbletGegnerSchwindlig();
     }
 }

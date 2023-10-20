@@ -20,6 +20,11 @@ namespace Fussballmannschaft
             Console.WriteLine($"{Name} macht eine Blutgraetsche!");
         }
 
+        public void DribbletGegnerSchwindlig()
+        {
+            Console.WriteLine($"{Name} dribblet den Gegner schwindlig!");
+        }
+
 
 
         public bool SchiesseTor()
