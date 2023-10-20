@@ -8,7 +8,7 @@ class Program
 
         Feldspieler spieler1 = new Feldspieler("Spieler1");
         Feldspieler spieler2 = new Feldspieler("Spieler2");
-        Torwart torwart = new Torwart();
+        Torwart torwart = new Torwart("Torwart1");
 
         team.AddFeldspieler(spieler1);
         team.AddFeldspieler(spieler2);
@@ -19,5 +19,7 @@ class Program
 
         spieler1.MacheBlutgraetsche(); //calls method 
         spieler1.DribbletGegnerSchwindlig();
+
+        bool schussGehalten = torwart.HalteTor(); //''
     }
 }
