@@ -14,5 +14,10 @@ namespace Lidl
         {
             Console.WriteLine($"Kunde: {Vorname} {Name} kauft bei Lidl.");
         }
+
+        public override void Trage()
+        {
+            Console.WriteLine($"Kunde {Vorname} {Name} trägt mit Einkaufswagen.");
+        }
     }
 }
