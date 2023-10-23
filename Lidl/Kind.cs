@@ -12,5 +12,10 @@ namespace Lidl
         {
             Console.WriteLine($"Kind: {Vorname} {Name} sitzt im Einkaufswagen.");
         }
+
+        public override void Esse()
+        {
+            Console.WriteLine($"Kind {Vorname} {Name} isst mit den Händen.");
+        }
     }
 }

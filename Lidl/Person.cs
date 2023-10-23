@@ -10,10 +10,11 @@ namespace Lidl
     {   
         public string Name { get; set; }
         public string Vorname { get; set; }
+        public int Id { get; set; }
 
-        public void Esse()
+        public virtual void Esse()
         {
-            Console.WriteLine($"Person: {Vorname} {Name} isst mit Messer und Gabel");
+            Console.WriteLine($"Person: {Vorname} {Name} {Id} isst mit Messer und Gabel");
         }
 
         //public virtual void Trage()
