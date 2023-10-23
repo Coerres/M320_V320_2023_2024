@@ -10,7 +10,7 @@ namespace Lidl
     {
         public double Umsatz { get; set; }
         
-        public void kaufe()
+        public void Kaufe()
         {
             Console.WriteLine($"Kunde: {Vorname} {Name} kauft bei Lidl.");
         }
