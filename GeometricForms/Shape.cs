@@ -24,15 +24,18 @@ namespace GeometricForms
         //methods
         public abstract void Draw();
         public abstract void Move(float deltaX, float deltaY);
-        public abstract void Rotate(double angle);
+        //public abstract void Rotate(double angle);
+        public abstract double CalculateArea();
 
-        public static void PrintPosition(IEnumerable<Shape> shapes)
+        public void PrintArea()
         {
-            Console.WriteLine("Positionen der Figuren: ");
-            foreach (var shape in shapes)
-            {
-                Console.WriteLine($"Position: ({shape.X}, {shape.Y})");
-            }
+            double area = CalculateArea();
+            Console.WriteLine($"Fläche: {area}");
+        }
+
+        public static void PrintPosition(Shape shapes)
+        { 
+                Console.WriteLine($"Position: ({shapes.X}, {shapes.Y})");  
         }
     }
 
@@ -69,16 +72,13 @@ namespace GeometricForms
             Y += deltaY;
             Console.WriteLine($"Verschiebe den Kreis um ({deltaX}, {deltaY}) nach der Position ({X}, {Y}).");
         }
-        public override void Rotate(double angle)
+
+        public override double CalculateArea()
         {
-            RotationAngle += angle;
-            Console.WriteLine($"Rotiere den Kreis um {angle} Grad.");
+            return Math.PI * Radius * Radius;
         }
 
-        public void PrintPosition()
-        {
-            Console.WriteLine($"Position des Kreises (Mittelpunkt): ({X}, {Y})");
-        }
+
     }
 
 
@@ -136,9 +136,9 @@ namespace GeometricForms
             Console.WriteLine($"Verschiebe das Rechteck um ({deltaX}, {deltaY}) nach Position ({X}, {Y}).");
         }
 
-        public override void Rotate(double angle)
+        public override double CalculateArea()
         {
-            
+            return Width * Height;
         }
     }
 }
