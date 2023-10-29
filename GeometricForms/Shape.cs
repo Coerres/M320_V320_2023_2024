@@ -48,5 +48,36 @@ namespace GeometricForms
             Console.WriteLine($"Rotiere den Kreis um {angle} Grad.");
         }
     }
+
+    public class Rectangle : Shape
+    {
+        public float Width { get; set; }
+        public float Height { get; set; }
+
+        public Rectangle(float x = 100.0f, float y = 100.0f, float width = 1.0f, float height = 1.0f)
+            : base(x, y)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        public override void Draw()
+        {
+            Console.WriteLine($"Zeichne ein Rechteck mit Breite {Width} und Höhe {Height} an Position ({X}, {Y}).");
+        }
+
+        public override void Move(float deltaX, float deltaY)
+        {
+            X += deltaX;
+            Y += deltaY;
+            Console.WriteLine($"Verschiebe das Rechteck um ({deltaX}, {deltaY}) nach Position ({X}, {Y}).");
+        }
+
+        public override void Rotate(double angle)
+        {
+            RotationAngle += angle;
+            Console.WriteLine($"Rotiere das Rechteck um {angle} Grad.");
+        }
+    }
 }
  
