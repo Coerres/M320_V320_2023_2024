@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace GeometricForms
 {
+    public interface IRotatable
+    {
+        void RotateClockwise90Degrees();
+    }
+
     public abstract class Shape
     {
         public float X { get; set; }
@@ -77,7 +82,7 @@ namespace GeometricForms
     }
 
 
-    public class Rectangle : Shape
+    public class Rectangle : Shape, IRotatable
     {
         private float width;
         private float height;
@@ -117,6 +122,13 @@ namespace GeometricForms
             Console.WriteLine($"Zeichne ein Rechteck mit Breite {Width} und Höhe {Height} an Position ({X}, {Y}).");
         }
 
+        public void RotateClockwise90Degrees()
+        {
+            double temp = Width;
+            Width = Height;
+            Height = (float)temp;
+        }
+
         public override void Move(float deltaX, float deltaY)
         {
             X += deltaX;
@@ -126,14 +138,7 @@ namespace GeometricForms
 
         public override void Rotate(double angle)
         {
-            RotationAngle += angle;
-            Console.WriteLine($"Rotiere das Rechteck um {angle} Grad.");
-        }
-
-        public void PrintPosition()
-        {
-            Console.WriteLine($"Position des Rechtecks (obere, linke Ecke): ({X}, {Y})");
-            Console.WriteLine($"Position der unteren, rechten Ecke: ({X + Width}, {Y + Height})");
+            
         }
     }
 }
