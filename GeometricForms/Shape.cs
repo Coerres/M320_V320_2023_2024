@@ -69,6 +69,11 @@ namespace GeometricForms
             RotationAngle += angle;
             Console.WriteLine($"Rotiere den Kreis um {angle} Grad.");
         }
+
+        public void PrintPosition()
+        {
+            Console.WriteLine($"Position des Kreises (Mittelpunkt): ({X}, {Y})");
+        }
     }
 
 
@@ -123,6 +128,12 @@ namespace GeometricForms
         {
             RotationAngle += angle;
             Console.WriteLine($"Rotiere das Rechteck um {angle} Grad.");
+        }
+
+        public void PrintPosition()
+        {
+            Console.WriteLine($"Position des Rechtecks (obere, linke Ecke): ({X}, {Y})");
+            Console.WriteLine($"Position der unteren, rechten Ecke: ({X + Width}, {Y + Height})");
         }
     }
 }
