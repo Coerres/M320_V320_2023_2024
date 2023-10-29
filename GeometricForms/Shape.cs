@@ -21,9 +21,21 @@ namespace GeometricForms
         public abstract void Rotate(double angle);
     }
 
+
     public class Circle : Shape
     {
-        public float Radius { get; set; }
+        private float radius;
+        public float Radius
+        {
+            get { return radius; }
+            set
+            {
+                if (value > 0)
+                    radius = value;
+                else
+                    throw new ArgumentException("Radius muss grösser als 0 sein.");
+            }
+        }
 
         public Circle(float x = 100.0f, float y = 100.0f, float radius = 1.0f)
             : base(x, y)
@@ -49,10 +61,34 @@ namespace GeometricForms
         }
     }
 
+
     public class Rectangle : Shape
     {
-        public float Width { get; set; }
-        public float Height { get; set; }
+        private float width;
+        private float height;
+
+        public float Width
+        {
+            get { return width; }
+            set
+            {
+                if (value > 0)
+                    width = value;
+                else
+                    throw new ArgumentException("Breite muss grösser als 0 sein.");
+            }
+        }
+        public float Height
+        {
+            get { return height; }
+            set
+            {
+                if (value > 0)
+                    height = value;
+                else
+                    throw new ArgumentException("Höhe muss grösser als 0 sein.");
+            }
+        }
 
         public Rectangle(float x = 100.0f, float y = 100.0f, float width = 1.0f, float height = 1.0f)
             : base(x, y)
