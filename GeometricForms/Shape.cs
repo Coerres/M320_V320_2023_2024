@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GeometricForms
 {
@@ -19,6 +20,15 @@ namespace GeometricForms
         public abstract void Draw();
         public abstract void Move(float deltaX, float deltaY);
         public abstract void Rotate(double angle);
+
+        public static void PrintPosition(IEnumerable<Shape> shapes)
+        {
+            Console.WriteLine("Positionen der Figuren: ");
+            foreach (var shape in shapes)
+            {
+                Console.WriteLine($"Position: ({shape.X}, {shape.Y})");
+            }
+        }
     }
 
 
