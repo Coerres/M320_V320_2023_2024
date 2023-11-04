@@ -6,7 +6,7 @@ namespace NumberConverter
     /// <summary>
     /// Zur Verf�gung gestellt von Peter Gisler, GIBZ
     /// </summary>
-    public class NumberConverter
+    public class NumberConverter //immer direkt internal --> public
     {
 
         StringConverter _stringConverter;
@@ -18,22 +18,27 @@ namespace NumberConverter
 
         public int RoundUp(float value)
         {
-            // TODO: Implement rounding...
-            // You must not use other methods to implement this method.
-            return 0;
+            int intValue = (int)value;
+            if(value > intValue)
+            {
+                intValue++;
+            }
+            return intValue;
         }
 
-        public int RoundDown(float value)
+        public int RoundDown(float value, int intValue)
         {
-            // TODO: Implement rounding...
-            // You must not use other methods to implement this method.
-            return 0;
+            if(value < intValue)
+            {
+                intValue--;
+            }
+            return intValue;
         }
 
 
         public int RoundToPowerOfTen(float value, int precisionExponent = 1)
         {
-            // TODO: Implement rounding...
+            // TODO: Implement rounding... 
             // Math.Round() may be used here
             return 0;
         }
