@@ -383,6 +383,29 @@
         }
     }
 
+    //Konstruktor-Injektion
+    public class MyService
+    {
+        private readonly IDependency _dependency;
+
+        // Konstruktor-Injektion
+        public MyService(IDependency dependency)
+        {
+            _dependency = dependency;
+        }
+
+        public void DoSomething()
+        {
+            _dependency.DoWork();
+        }
+    }
+
+    public interface IDependency
+    {
+        void DoWork();
+    }
+
+
 
 }
 }
