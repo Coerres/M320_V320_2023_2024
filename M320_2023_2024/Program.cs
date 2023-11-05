@@ -209,5 +209,106 @@
         }
 
 
+        //Syntax zur Deklaration der Generalisierung 
+        public class Fahrzeug
+        {
+            public string Marke { get; set; }
+            public string Modell { get; set; }
+
+            public void Starten()
+            {
+                Console.WriteLine("Das Fahrzeug wird gestartet.");
+            }
+        }
+
+        public class Auto : Fahrzeug
+        {
+            public int AnzahlDerTüren { get; set; }
+
+            public void Hupen()
+            {
+                Console.WriteLine("Hup hup!");
+            }
+        }
+
+
+        //Vererbungshierachie
+        // Basisklasse Animal
+        public class Animal
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+
+            public Animal(string name, int age)
+            {
+                Name = name;
+                Age = age;
+            }
+
+            public virtual void MakeSound()
+            {
+                Console.WriteLine("Das Tier macht einen unbekannten Laut.");
+            }
+        }
+
+        // Subklasse Bird (Vogel)
+        public class Bird : Animal
+        {
+            public string FeatherColor { get; set; }
+
+            public Bird(string name, int age, string featherColor)
+                : base(name, age)
+            {
+                FeatherColor = featherColor;
+            }
+
+            public override void MakeSound()
+            {
+                Console.WriteLine("Der Vogel zwitschert.");
+            }
+        }
+
+        // Subklasse Mammal (Säugetier)
+        public class Mammal : Animal
+        {
+            public string FurColor { get; set; }
+
+            public Mammal(string name, int age, string furColor)
+                : base(name, age)
+            {
+                FurColor = furColor;
+            }
+
+            public override void MakeSound()
+            {
+                Console.WriteLine("Das Säugetier macht Geräusche.");
+            }
+        }
+
+        // Subklasse Dog (Hund)
+        public class Dog : Mammal
+        {
+            public Dog(string name, int age, string furColor)
+                : base(name, age, furColor)
+            {
+            }
+
+            public void Bark()
+            {
+                Console.WriteLine("Der Hund bellt.");
+            }
+        }
+
+        Bird sparrow = new Bird("Spatz", 2, "Braun");
+        sparrow.MakeSound();  // Der Vogel zwitschert.
+
+        Dog goldenRetriever = new Dog("Buddy", 3, "Goldenes Fell");
+        goldenRetriever.MakeSound();  // Das Säugetier macht Geräusche.
+        goldenRetriever.Bark();  // Der Hund bellt.
+
+
+
+
+
     }
 }
