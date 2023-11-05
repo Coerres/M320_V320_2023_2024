@@ -74,7 +74,28 @@
         {
             // Eigenschaften und Methoden für Räder
         }
+        $
 
+
+        // Superklasse (Basisklasse)
+        public class Animal
+        {
+            public string Name { get; set; }
+
+            public void Eat()
+            {
+                Console.WriteLine($"{Name} is eating.");
+            }
+        }
+
+        // Subklasse (abgeleitete Klasse)
+        public class Dog : Animal
+        {
+            public void Bark()
+            {
+                Console.WriteLine("Woof woof!");
+            }
+        }
 
     }
 }
