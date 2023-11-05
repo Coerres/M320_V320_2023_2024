@@ -367,6 +367,22 @@
         }
 
 
+    //Dependency Injection (DI)
+    public class MyService
+    {
+        private readonly IDependency _dependency;
+
+        public MyService(IDependency dependency)
+        {
+            _dependency = dependency;
+        }
+
+        public void DoSomething()
+        {
+            _dependency.DoWork();
+        }
+    }
+
 
 }
 }
