@@ -130,6 +130,39 @@
             }
         }
 
+        //Vererbung
+        public class Animal
+        {
+            public string Name { get; set; }
+
+            public Animal(string name)
+            {
+                Name = name;
+            }
+
+            public void Eat()
+            {
+                Console.WriteLine($"{Name} is eating.");
+            }
+        }
+
+        public class Dog : Animal
+        {
+            public Dog(string name) : base(name)
+            {
+            }
+
+            public void Bark()
+            {
+                Console.WriteLine("Woof woof!");
+            }
+        }
+
+        // Verwendung
+        Dog myDog = new Dog("Fido");
+        myDog.Eat();  // Geerbte Methode von Animal
+myDog.Bark(); // Eigene Methode von Dog
+
 
     }
 }
