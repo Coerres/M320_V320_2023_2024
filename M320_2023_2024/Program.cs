@@ -307,8 +307,66 @@
         goldenRetriever.Bark();  // Der Hund bellt.
 
 
+        //Überschreiben von Methoden
+        public class Shape
+        {
+            public virtual void Draw()
+            {
+                Console.WriteLine("Drawing a generic shape.");
+            }
+        }
+
+        public class Circle : Shape
+        {
+            public override void Draw()
+            {
+                Console.WriteLine("Drawing a circle.");
+            }
+        }
+
+        public class Rectangle : Shape
+        {
+            public override void Draw()
+            {
+                Console.WriteLine("Drawing a rectangle.");
+            }
+        }
+
+
+        //Verwendung von Schnittstellen
+        public interface IComparable
+        {
+            int CompareTo(object other);
+        }
+
+        public class Student : IComparable
+        {
+            public int CompareTo(object other)
+            {
+                // Vergleichslogik für Studenten implementieren
+            }
+        }
+
+        public class Book : IComparable
+        {
+            public int CompareTo(object other)
+            {
+                // Vergleichslogik für Bücher implementieren
+            }
+        }
+
+
+        //Polymorphie in Collections
+        List<Shape> shapes = new List<Shape>();
+        shapes.Add(new Circle());
+        shapes.Add(new Rectangle());
+
+        foreach (Shape shape in shapes)
+        {
+        shape.Draw(); // Polymorphe Ausführung von Draw basierend auf dem tatsächlichen Typ des Objekts.
+        }
 
 
 
-    }
+}
 }
