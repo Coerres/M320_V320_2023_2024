@@ -161,7 +161,52 @@
         // Verwendung
         Dog myDog = new Dog("Fido");
         myDog.Eat();  // Geerbte Methode von Animal
-myDog.Bark(); // Eigene Methode von Dog
+        myDog.Bark(); // Eigene Methode von Dog
+
+
+        //public
+        public class Superclass
+        {
+            public int PublicField;
+        }
+
+        public class Subclass : Superclass
+        {
+            public void AccessSuperclassField()
+            {
+                int value = base.PublicField; // Zugriff auf das öffentliche Feld der Superklasse
+            }
+        }
+
+        //private
+        public class Superclass
+        {
+            private int PrivateField;
+        }
+
+        public class Subclass : Superclass
+        {
+            public void AccessSuperclassField()
+            {
+                // Das private Feld der Superklasse ist in der Subklasse nicht sichtbar.
+                // Ein Zugriffsversuch würde einen Compilerfehler verursachen.
+                // int value = base.PrivateField; // Dies ist nicht erlaubt.
+            }
+        }
+
+        //protected
+        public class Superclass
+        {
+            protected int ProtectedField;
+        }
+
+        public class Subclass : Superclass
+        {
+            public void AccessSuperclassField()
+            {
+                int value = base.ProtectedField; // Zugriff auf das geschützte Feld der Superklasse
+            }
+        }
 
 
     }
