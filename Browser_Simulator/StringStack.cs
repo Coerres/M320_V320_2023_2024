@@ -52,5 +52,28 @@ namespace Browser_Simulator
                 return null;
             }
         }
+
+        public void Clear()
+        {
+            // Lösche alle Daten im Stack
+            Array.Clear(values, 0, values.Length);
+            index = 0;
+            Console.WriteLine("Stack wurde geleert.");
+        }
+
+        public bool IsEmpty
+        {
+            get { return index == 0; }
+        }
+
+        public int Count
+        {
+            get { return index; }
+        }
+
+        public bool IsFull
+        {
+            get { return index == values.Length; }
+        }
     }
 }
