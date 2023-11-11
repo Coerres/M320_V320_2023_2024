@@ -18,11 +18,11 @@ namespace Browser_Simulator
                 {
                     break;
                 }
-                BrowseURL(url);
+                BrowseURLhere(url);
             }
         }
 
-        public void BrowseURL(string url)
+        public void BrowseURLhere(string url)
         {
             Console.WriteLine($"Lade {url}");
         }
