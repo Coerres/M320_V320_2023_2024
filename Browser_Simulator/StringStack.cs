@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Browser_Simulator
 {
@@ -10,54 +6,51 @@ namespace Browser_Simulator
     {
         string[] values;
         int index;
+
         public StringStack()
         {
             values = new string[10];
         }
+
         public void Push(string value)
         {
-            this.values[index++] = value;
-
-            if (index < 0)
+            if (index < 10)
             {
-                Console.WriteLine("Stack ist leer.");
-            }
-            else if (index >= 0 || index <= 8)
-            {
+                this.values[index++] = value;
                 Console.WriteLine("Stack ist befüllt.");
             }
-            else if (index == 9)
-            { 
- 
+            else
+            {
                 Console.WriteLine("Stack ist voll.");
             }
-
         }
 
         public string Pop()
         {
-            index--;
-
-            if (index < 0)
+            if (index > 0)
+            {
+                index--;
+                Console.WriteLine("Stack ist befüllt.");
+                return this.values[index];
+            }
+            else
             {
                 Console.WriteLine("Stack ist leer.");
+                return null;
             }
-            else if (index >= 0 || index <= 8)
-            {
-                Console.WriteLine("Stack ist befüllt.");
-            }
-            else if (index == 9)
-            {
-
-                Console.WriteLine("Stack ist voll.");
-            }
-            return this.values[index];
-
         }
 
         public string Peak()
         {
-            return this.values[index];
+            if (index > 0)
+            {
+                return this.values[index - 1];
+            }
+            else
+            {
+                Console.WriteLine("Stack ist leer.");
+                return null;
+            }
         }
     }
 }

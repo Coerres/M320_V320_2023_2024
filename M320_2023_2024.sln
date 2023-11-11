@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometricForms", "Geometric
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberConverter", "NumberConverter\NumberConverter.csproj", "{3FB69F09-982E-4942-A360-61A2630FAB70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wasserfass", "Wasserfass\Wasserfass.csproj", "{8E30BDFC-DFE3-49EB-87A6-41DCDC43CE02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wasserfass", "Wasserfass\Wasserfass.csproj", "{8E30BDFC-DFE3-49EB-87A6-41DCDC43CE02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Browser_Simulator", "Browser_Simulator\Browser_Simulator.csproj", "{F677460C-022E-4D93-B1C4-DAEAD679BD49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Browser_Simulator", "Browser_Simulator\Browser_Simulator.csproj", "{F677460C-022E-4D93-B1C4-DAEAD679BD49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
