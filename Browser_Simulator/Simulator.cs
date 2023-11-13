@@ -6,19 +6,24 @@ using System.Threading.Tasks;
 
 namespace Browser_Simulator
 {
-    public class Simulator
+    internal class Simulator
     {
         private StringStack stack = new StringStack();
+        //memberwvariable
+        private string currentUrl;
         public void Run()
         {
             while(true)
-            { 
+            {
+                DisplayURL();
                 Console.Write("Geben Sie eine URL ein:");
                 string url = Console.ReadLine();
                 switch(url)
                 {
                     case "e":
+                        Environment.Exit(0);
                         break;
+
                     case "p":
                         Undo();
                         break;
@@ -42,11 +47,24 @@ namespace Browser_Simulator
         {
             Console.WriteLine($"Lade {url}");
             stack.Push(url);
+            currentUrl = url;
         }
 
         private void Undo()
         {
-            stack.Pop();
+            if (stack.Count > 0)
+            {
+                currentUrl= stack.Pop();
+            }
+            else
+            {
+                Console.WriteLine("Diese Funktion ist momentan nicht möglich");
+            }
+        }
+
+        private void DisplayURL()
+        {
+            Console.WriteLine($"Die aktuelle URL ist");
         }
 
     }
