@@ -20,7 +20,7 @@ namespace Browser_Simulator
                     case "e":
                         break;
                     case "p":
-                        stack.Pop();
+                        Undo();
                         break;
 
                     default:
@@ -38,9 +38,16 @@ namespace Browser_Simulator
             }
         }
 
-        public void BrowseURLhere(string url)
+        private void BrowseURLhere(string url)
         {
             Console.WriteLine($"Lade {url}");
+            stack.Push(url);
         }
+
+        private void Undo()
+        {
+            stack.Pop();
+        }
+
     }
 }
