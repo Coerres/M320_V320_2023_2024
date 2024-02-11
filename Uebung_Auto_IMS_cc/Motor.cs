@@ -28,7 +28,7 @@ namespace Uebung_Auto_IMS_cc
 
         private void Regeln()
         {
-            for(int i = 0; i > 7; i++)
+            for(int i = 0; i < 7; i++)
             {
                 Console.WriteLine("Motor regeln");
             }
