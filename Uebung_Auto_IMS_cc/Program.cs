@@ -1,10 +1,11 @@
-﻿namespace Uebung_Auto_IMS_cc
+﻿using System;
+namespace Uebung_Auto_IMS_cc
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
         }
     }
 }
