@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wasserfass", "Wasserfass\Wa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Browser_Simulator", "Browser_Simulator\Browser_Simulator.csproj", "{F677460C-022E-4D93-B1C4-DAEAD679BD49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Browser_Simulator_Test", "Browser_Simulator_Test\Browser_Simulator_Test.csproj", "{2DF94419-E917-4875-B178-108FA1539276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Browser_Simulator_Test", "Browser_Simulator_Test\Browser_Simulator_Test.csproj", "{2DF94419-E917-4875-B178-108FA1539276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uebung_Auto_IMS_cc", "Uebung_Auto_IMS_cc\Uebung_Auto_IMS_cc.csproj", "{321417A1-2A3F-4CC4-8675-9AF3DBE88B38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{2DF94419-E917-4875-B178-108FA1539276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DF94419-E917-4875-B178-108FA1539276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DF94419-E917-4875-B178-108FA1539276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321417A1-2A3F-4CC4-8675-9AF3DBE88B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321417A1-2A3F-4CC4-8675-9AF3DBE88B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321417A1-2A3F-4CC4-8675-9AF3DBE88B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321417A1-2A3F-4CC4-8675-9AF3DBE88B38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
