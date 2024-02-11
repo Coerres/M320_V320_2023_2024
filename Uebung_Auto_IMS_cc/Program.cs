@@ -5,7 +5,8 @@ namespace Uebung_Auto_IMS_cc
     {
         static void Main(string[] args)
         {
-            
+            Auto meinAuto = new Auto();
+            meinAuto.Anlassen();
         }
     }
 }
